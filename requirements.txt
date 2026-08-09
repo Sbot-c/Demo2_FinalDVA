@@ -1,0 +1,19 @@
+# scikit-learn is pinned exactly: the models in dashboard_exports/*.pkl were
+# pickled with 1.8.0, and loading a pickle across versions can misbehave.
+# It ships wheels for Python 3.11 through 3.14, so this pin is safe anywhere.
+scikit-learn==1.8.0
+
+# Everything else uses lower bounds so pip can pick a prebuilt wheel for
+# whichever Python version the host gives us. Exact pins on numpy/pandas
+# force a source build on Python 3.13+, which takes 15-30 minutes and
+# frequently runs out of memory on a free-tier container.
+numpy>=1.26
+pandas>=2.2,<3
+plotly>=5.24
+
+# streamlit is preinstalled on Community Cloud. Leaving it unpinned avoids
+# an uninstall-then-reinstall cycle on every build.
+
+# mlxtend is only used by generate_exports.py (Apriori rule mining), never by
+# the running dashboard. Uncomment if you regenerate exports.
+# mlxtend>=0.23
