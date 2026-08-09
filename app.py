@@ -15,23 +15,6 @@ st.set_page_config(
 
 EXPORT_DIR = Path(__file__).parent / "dashboard_exports"
 
-# ============================================================================
-# TEMPORARY DEBUG BLOCK — DELETE THIS WHOLE SECTION ONCE THE APP RUNS
-# ============================================================================
-st.warning("Debug mode — remove this block from app.py once the path is confirmed.")
-st.write("**Working directory:**", os.getcwd())
-st.write("**app.py lives in:**", str(Path(__file__).parent))
-st.write("**Files next to app.py:**", sorted(os.listdir(Path(__file__).parent)))
-st.write("**Looking for exports at:**", str(EXPORT_DIR))
-st.write("**That folder exists:**", EXPORT_DIR.exists())
-if EXPORT_DIR.exists():
-    st.write("**Files inside it:**", sorted(os.listdir(EXPORT_DIR)))
-st.stop()
-# ============================================================================
-# END DEBUG BLOCK
-# ============================================================================
-
-
 @st.cache_data
 def load_metrics():
     with open(EXPORT_DIR / "metrics_summary.json") as f:
