@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
-
+import os
+st.write("cwd:", os.getcwd())
+st.write("repo root:", sorted(os.listdir(Path(__file__).parent)))
 import streamlit as st
 
 import theme
