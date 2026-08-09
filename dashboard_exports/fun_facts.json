@@ -1,0 +1,25 @@
+{
+  "total_reviews_in_full_dataset": 992153,
+  "reviews_analyzed_this_run": 136585,
+  "total_games": 290,
+  "most_helpful_review": {
+    "game": "Dragon's Dogma 2",
+    "helpful_votes": 38446
+  },
+  "most_funny_review": {
+    "game": "PAYDAY 2",
+    "funny_votes": 12196
+  },
+  "longest_avg_playtime_game": {
+    "game": "Hearts of Iron IV",
+    "avg_hours": 422.7
+  },
+  "longest_single_review": {
+    "game": "Project Zomboid",
+    "characters": 8299
+  },
+  "sells_great_rated_poorly": "EA SPORTS FC\u2122 25",
+  "rated_great_sells_modestly": "Thank Goodness You're Here!",
+  "data_bug_found": "24 rows in the 'funny' votes column contained 4294967295 (2^32-1, a classic 32-bit integer overflow) from the original Steam scrape \u2014 corrected to missing.",
+  "positive_rating_share_pct": 87.6
+}
