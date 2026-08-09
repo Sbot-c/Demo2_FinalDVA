@@ -1,0 +1,24 @@
+# ---- The two things that broke the old setup ----------------------------
+# steam_game_reviews.csv is ~475 MB. GitHub hard-rejects any file over 100 MB,
+# and the dashboard never reads it at runtime — only generate_exports.py does.
+# Keep it locally, next to this repo; it stays out of version control.
+steam_game_reviews.csv
+
+# A committed virtualenv is tens of thousands of files. Streamlit Cloud builds
+# its own environment from requirements.txt.
+.venv/
+.venv2/
+venv/
+env/
+
+# ---- Python -------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ---- Editors / OS -------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

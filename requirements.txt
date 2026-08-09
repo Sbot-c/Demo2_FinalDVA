@@ -1,0 +1,10 @@
+streamlit==1.38.0
+pandas==2.2.2
+numpy==1.26.4
+plotly==5.24.1
+scikit-learn==1.8.0
+
+# mlxtend is only used by generate_exports.py (Apriori rule mining), never by
+# the running dashboard. Uncomment it if you need to regenerate exports on a
+# machine that doesn't already have it.
+# mlxtend==0.23.1
