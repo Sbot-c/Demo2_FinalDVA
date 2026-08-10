@@ -1,0 +1,5 @@
+algorithm,silhouette
+KMeans (k=4),0.1649
+Agglomerative (k=4),0.134
+DBSCAN (eps=2.0),-0.0198
+DBSCAN (eps=2.5),-0.1035

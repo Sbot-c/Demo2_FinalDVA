@@ -1,0 +1,7 @@
+model,cv_r2,std
+Gradient Boosting (depth 4),0.738,0.0066
+Gradient Boosting (depth 6),0.7364,0.0066
+Gradient Boosting (depth 3),0.7361,0.0067
+Random Forest (200 trees),0.7334,0.0059
+Ridge Regression,0.1104,0.121
+Linear Regression,0.1104,0.121
