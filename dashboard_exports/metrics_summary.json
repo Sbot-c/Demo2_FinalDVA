@@ -1,0 +1,99 @@
+{
+  "classification": {
+    "accuracy": 0.8477504850459421,
+    "precision": 0.8588157741672806,
+    "recall": 0.9771463866584311,
+    "f1": 0.9141677845423589,
+    "auc": 0.8040313835099644,
+    "train_test_gap": 0.001766299374016178,
+    "confusion_matrix": {
+      "true_negative": 1010,
+      "false_positive": 3641,
+      "false_negative": 518,
+      "true_positive": 22148,
+      "n_test": 27317
+    }
+  },
+  "clustering": {
+    "silhouette_k4": 0.16492563186016782,
+    "chosen_k": 4
+  },
+  "regression": {
+    "r2": 0.7383162827484322,
+    "target": "log1p(funny_votes)"
+  },
+  "association": {
+    "n_rules": 439,
+    "top_lift": 6.865306122448979
+  },
+  "diagnostic": {
+    "rating_vs_salesrank_corr": -0.009
+  },
+  "dataset": {
+    "n_games": 290,
+    "n_reviews_sampled": 136585,
+    "n_reviews_total": 992153
+  },
+  "gridsearch": {
+    "classification": {
+      "n_combinations": 12,
+      "n_folds": 5,
+      "n_fits": 60,
+      "subsample_rows": 20000,
+      "runtime_seconds": 189.7,
+      "best_params": {
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "n_estimators": 100
+      },
+      "best_cv_f1_subsample": 0.9125,
+      "head_to_head": {
+        "manual": {
+          "accuracy": 0.8478,
+          "precision": 0.8588,
+          "recall": 0.9771,
+          "f1": 0.9142,
+          "auc": 0.804
+        },
+        "grid_best": {
+          "accuracy": 0.8465,
+          "precision": 0.8526,
+          "recall": 0.9854,
+          "f1": 0.9142,
+          "auc": 0.7979
+        }
+      }
+    },
+    "clustering": {
+      "best": {
+        "k": 6,
+        "n_pca": 5,
+        "silhouette": 0.2434,
+        "explained_variance": 0.49
+      },
+      "chosen": {
+        "k": 4,
+        "n_pca": 10,
+        "silhouette": 0.1649,
+        "explained_variance": 0.682
+      }
+    },
+    "regression": {
+      "n_combinations": 12,
+      "n_folds": 5,
+      "n_fits": 60,
+      "subsample_rows": 20000,
+      "runtime_seconds": 219.1,
+      "best_params": {
+        "learning_rate": 0.05,
+        "max_depth": 4,
+        "n_estimators": 100
+      },
+      "best_cv_r2_subsample": 0.723,
+      "head_to_head": {
+        "manual_test_r2": 0.7383,
+        "grid_test_r2": 0.7377
+      }
+    }
+  }
+}
